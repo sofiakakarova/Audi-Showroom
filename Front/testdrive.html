@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDrive</title>
+</head>
+<body>
+    <h2>Test Drive Registration</h2>
+
+    <form action="submit_test_drive.php" method="post">  
+        <label for="date">Test Drive Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Test Drive Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="passport">Passport/ID Number:</label>
+        <input type="text" id="passport" name="passport" required>
+
+        <label for="license">Driver's License Number:</label>
+        <input type="text" id="license" name="license" required>
+
+        <label for="car">Select Car Model:</label>
+        <select id="car" name="car" required>
+            <option value="audi-a3">Audi A5</option>
+            <option value="audi-a4">Audi RS7</option>
+            <option value="audi-q5">Audi Q8</option>
+            <option value="audi-e-tron">Audi e-tron</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <label>
+            <input type="checkbox" name="agree" required>
+            I agree to follow all test drive terms and conditions.
+        </label>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
