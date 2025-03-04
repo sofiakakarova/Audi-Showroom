@@ -3,48 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts - Audi Dealership</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styleContacts.css">
 </head>
 <body>
 
-    <h1>Contact Us</h1>
+    <!-- Кнопка повернення -->
+    <a href="index.html" class="home-button">⬅ Back to Home</a>
 
-    <p><strong>Address:</strong> St. Hmyri, 16, Kyiv</p>
-    <p><strong>Email:</strong> info.premium.audi@gmail.com</p>
-    <p><strong>Phone Number:</strong> +380 99 713 39 74</p>
-    
-    <h2>Opening Hours</h2>
-    <ul>
-        <li>Monday - Friday: 9:00 AM - 7:00 PM</li>
-        <li>Saturday: 10:00 AM - 5:00 PM</li>
-        <li>Sunday: Closed</li>
-    </ul>
+    <div class="contact-container">
 
-    <h2>Find Us on the Map</h2>
-    <p><a href="https://www.google.com/maps?q=St.+Hmyri,+16,+Kyiv" target="_blank">View on Google Maps</a></p>
+        <h1>Contact Us</h1>
 
-    <h2>Social Media</h2>
-    <ul>
-        <li><a href="https://www.facebook.com/audi" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/audi" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com/audi" target="_blank">Twitter</a></li>
-    </ul>
+        <div class="contact-info">
+            <p><strong>📍 Address:</strong> Hmyri, 16, Kyiv</p>
+            <p><strong>📧 Email:</strong> <a href="mailto:info.premium.audi@gmail.com">info.premium.audi@gmail.com</a></p>
+            <p><strong>📞 Phone:</strong> +380 99 713 39 74</p>
+        </div>
 
-    <h2>Contact Form</h2>
-    <form action="submit_contact.php" method="post">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <h2>Opening Hours</h2>
+        <ul class="opening-hours">
+            <li>Monday - Friday: <span>9:00 AM - 7:00 PM</span></li>
+            <li>Saturday: <span>10:00 AM - 5:00 PM</span></li>
+            <li>Sunday: <span>Closed</span></li>
+        </ul>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <h2>Find Us on the Map</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.804376732581!2d30.519618076116746!3d50.45365137156852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4c2a1f8e73%3A0x5633e5d9d4c9e6b6!2z0JrRg9C30L3QsNGPLCDQnNCw0LvQtdGA0YHQuNGC0LXRgiwg0KfQutCw0YLRgdGM0LrQsCDQvtCx0LsuLCAwMDAwMA!5e0!3m2!1suk!2sua!4v1715024044999" 
+                width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <h2>Social Media</h2>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
 
-        <button type="submit">Send</button>
-    </form>
+        <h2>Contact Form</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
 
-    <p><a href="index.html">Back to Home</a></p>
+    </div>
 
 </body>
 </html>

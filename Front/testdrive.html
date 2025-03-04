@@ -3,52 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestDrive</title>
+    <title>Test Drive Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Test Drive Registration</h2>
 
-    <form action="submit_test_drive.php" method="post">  
-        <label for="date">Test Drive Date:</label>
-        <input type="date" id="date" name="date" required>
+    <!-- Кнопка повернення на головну -->
+    <a href="index.html" class="home-button">⬅ Back to Home</a>
 
-        <label for="time">Test Drive Time:</label>
-        <input type="time" id="time" name="time" required>
+    <div class="test-drive-container">
+        <h1>Test Drive Registration</h1>
+        <p>We offer you the opportunity to test drive the car of your dreams. Fill out the form below to schedule your test drive.</p>
 
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <form class="test-drive-form">
+            <div class="form-group">
+                <label for="date">📅 Date:</label>
+                <input type="date" id="date" required>
+            </div>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
+            <div class="form-group">
+                <label for="time">⏰ Time:</label>
+                <input type="time" id="time" required>
+            </div>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="fullname">👤 Full Name:</label>
+                <input type="text" id="fullname" placeholder="Enter your full name" required>
+            </div>
 
-        <label for="passport">Passport/ID Number:</label>
-        <input type="text" id="passport" name="passport" required>
+            <div class="form-group">
+                <label for="phone">📞 Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
 
-        <label for="license">Driver's License Number:</label>
-        <input type="text" id="license" name="license" required>
+            <div class="form-group">
+                <label for="email">📧 Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
 
-        <label for="car">Select Car Model:</label>
-        <select id="car" name="car" required>
-            <option value="audi-a3">Audi A5</option>
-            <option value="audi-a4">Audi RS7</option>
-            <option value="audi-q5">Audi Q8</option>
-            <option value="audi-e-tron">Audi e-tron</option>
-        </select>
+            <div class="form-group">
+                <label for="passport">🆔 Passport/ID Number:</label>
+                <input type="text" id="passport" placeholder="Enter passport/ID number" required>
+            </div>
 
-        <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
+            <div class="form-group">
+                <label for="license">🚗 Driver's License Number:</label>
+                <input type="text" id="license" placeholder="Enter your license number" required>
+            </div>
 
-        <label>
-            <input type="checkbox" name="agree" required>
-            I agree to follow all test drive terms and conditions.
-        </label>
+            <div class="form-group">
+                <label for="car">🚘 Select Car Model:</label>
+                <select id="car">
+                    <option>Audi A5</option>
+                    <option>Audi RS7</option>
+                    <option>Audi Q8</option>
+                    <option>Audi e-tron</option>
+                </select>
+            </div>
 
-        <button type="submit">Submit</button>
+            <div class="form-group">
+                <label for="comments">💬 Additional Comments:</label>
+                <textarea id="comments" placeholder="Any special requests?"></textarea>
+            </div>
 
-    </form>
+            <div class="form-group checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to follow all test drive terms and conditions.</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </form>
+    </div>
 
 </body>
 </html>
