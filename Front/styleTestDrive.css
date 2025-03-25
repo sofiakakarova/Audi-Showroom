@@ -1,0 +1,83 @@
+/* ======================== styleTestDrive.css ======================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* Загальні стилі */
+body {
+    background-color: black;  /* Фон для BODY */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Кнопка повернення на головну */
+a.home-button {
+    background: #5618acf0;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+a.home-button:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* Контейнер для форми тест-драйву */
+.test-drive-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Стилі для форми */
+.test-drive-form input, .test-drive-form select, .test-drive-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.test-drive-form input:focus, .test-drive-form select:focus, .test-drive-form textarea:focus {
+    background: #333;
+    outline: none;
+}
+
+/* Кнопка відправки форми */
+.submit-btn {
+    background: #5618acf0;
+    color: black;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* стилі для унікальних ідентифікаторів */
+#fullname, #phone, #email, #passport, #license {
+    background-color: #1a1a1a;
+    border: 1px solid #5618acf0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#fullname:focus, #phone:focus, #email:focus, #passport:focus, #license:focus {
+    outline: 2px solid #5618acf0;
+    background-color: #2a2a2a;
+}

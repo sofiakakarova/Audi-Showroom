@@ -1,107 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* ======================== styleCataloge.css ======================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+/* Загальні стилі */
 body {
-    background: #000; 
+    background-color: black;  /* Фон для BODY */
     color: white;
-    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
 }
 
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+/* Кнопка повернення на головну */
+a.home-button {
     background: #5618acf0;
     color: black;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: background 0.3s;
 }
 
-.home-button:hover {
+a.home-button:hover {
     background: white;
     transform: scale(1.1);
 }
 
-/* Градієнтний текст */
+/* Градієнтний текст для заголовка */
 .gradient-text {
-    font-size: 48px;
-    font-weight: 700;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #7d7d7d, #b3b3b3, #e0e0e0); /* Градієнт сірого */
+    background: linear-gradient(90deg, #7d7d7d, #b3b3b3, #e0e0e0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
 }
 
-
-.catalog-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+/* Таблиця автомобілів */
+.car-table {
     width: 90%;
-    max-width: 1400px;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
 }
 
-
-.car-card {
-    background: #111;
-    border-radius: 12px;
+.car-table th, .car-table td {
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-bottom: 1px solid white;  /* межі між рядками */
 }
 
-.car-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+.car-table thead {
+    background: #5618acf0;  /* Фон для заголовків таблиці */
+    color: black;
 }
 
-
-.car-card img {
-    width: 100%;
-    max-width: 250px;
+.car-table img {
+    width: 100px;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s;
 }
 
-.car-card img:hover {
-    transform: scale(1.05);
+.car-table img:hover {
+    transform: scale(1.1);
 }
 
-/* Назва авто */
-.car-card h2 {
-    font-size: 22px;
-    margin: 10px 0;
-    color: white;
+/* Список опису автомобілів */
+.car-description {
+    margin: 20px auto;
+    text-align: left;
+    max-width: 600px;
+    font-size: 18px;
 }
 
-/* Опис */
-.car-card p {
-    font-size: 16px;
-    color: #aaa;
-    margin-bottom: 10px;
-}
-
-/* Ціна */
-.car-card .price {
+.car-description dt {
+    color: #5618acf0;  /* Стиль для назв автомобілів */
     font-weight: bold;
-    font-size: 20px;
-    color: #5618acf0;
+}
+
+.car-description dd {
+    margin-left: 20px;
+    color: #ddd;
 }

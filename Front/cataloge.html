@@ -9,40 +9,64 @@
 <body>
 
     <!-- Кнопка повернення на головну -->
-    <a href="index.html" class="home-button">⬅ Home</a>
+    <a href="index.html" class="home-button">⬅️ Home</a>
 
     <!-- Головний заголовок -->
     <h1 class="gradient-text">Choose your dream car</h1>
 
-    <div class="catalog-container">
-        <div class="car-card">
-            <img src="image/a5.jpg" alt="Audi A5">
-            <h2>Audi A5</h2>
-            <p>Stylish and comfortable sedan</p>
-            <div class="price">$50,000</div>
-        </div>
+    <!-- Таблиця з автомобілями -->
+    <table class="car-table">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Image</th>
+                <th>Type</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Audi A5</td>
+                <td><img src="image/a5.jpg" alt="Audi A5"></td>
+                <td>Stylish and comfortable sedan</td>
+                <td>$50,000</td>
+            </tr>
+            <tr>
+                <td>Audi RS7</td>
+                <td><img src="image/rs7.jpg" alt="Audi RS7"></td>
+                <td>Powerful sports sedan</td>
+                <td>$80,000</td>
+            </tr>
+            <tr>
+                <td>Audi Q8</td>
+                <td><img src="image/q8.jpg" alt="Audi Q8"></td>
+                <td>Luxury premium-class crossover</td>
+                <td>$90,000</td>
+            </tr>
+            <tr>
+                <td>Audi e-tron</td>
+                <td><img src="image/e-tron.jpg" alt="Audi e-tron"></td>
+                <td>Next-generation electric car</td>
+                <td>$75,000</td>
+            </tr>
+        </tbody>
+    </table>
 
-        <div class="car-card">
-            <img src="image/rs7.jpg" alt="Audi RS7">
-            <h2>Audi RS7</h2>
-            <p>Powerful sports sedan</p>
-            <div class="price">$80,000</div>
-        </div>
-
-        <div class="car-card">
-            <img src="image/q8.jpg" alt="Audi Q8">
-            <h2>Audi Q8</h2>
-            <p>Luxury premium-class crossover</p>
-            <div class="price">$90,000</div>
-        </div>
-
-        <div class="car-card">
-            <img src="image/e-tron.jpg" alt="Audi e-tron">
-            <h2>Audi e-tron</h2>
-            <p>Next-generation electric car</p>
-            <div class="price">$75,000</div>
-        </div>
-    </div>
+    <!-- Опис автомобілів у вигляді списку -->
+    <h2 class="gradient-text">Why Choose Audi?</h2>
+    <dl class="car-description">
+        <dt><strong>Audi A5</strong></dt>
+        <dd>- Sleek design and fuel efficiency</dd>
+        
+        <dt><strong>Audi RS7</strong></dt>
+        <dd>- High performance and luxury</dd>
+        
+        <dt><strong>Audi Q8</strong></dt>
+        <dd>- Spacious interior and advanced tech</dd>
+        
+        <dt><strong>Audi e-tron</strong></dt>
+        <dd>- Fully electric and eco-friendly</dd>
+    </dl>
 
 </body>
 </html>

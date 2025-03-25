@@ -1,26 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-* {
+body {
+    background: url('image/backround.jpg') no-repeat center center/cover;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
-
-.top-buttons {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 30px;
-    z-index: 3; 
-}
-
+/* important*/
 .top-buttons a {
+    position: relative; /* Встановлюємо активність посилань */
+    z-index: 3;  /* Вищий пріоритет для кліку */
     text-decoration: none;
-    color: white;
+    color: white !important;
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
@@ -34,18 +26,24 @@
     color: black;
 }
 
+/* Меню посилань */
+.top-buttons {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    z-index: 3;  /* Підвищення пріоритету для активності посилань */
+}
 
+/* Блок контенту на головній сторінці */
 .hero {
     height: 100vh;
-    background: url('image/backround.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     position: relative;
 }
 
-
+/* Виправлена накладка, щоб не закривати меню */
 .overlay {
     position: absolute;
     top: 0;
@@ -53,40 +51,33 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 1; /* Менший пріоритет, щоб не блокувати посилання */
 }
-
 
 .content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2; /* Щоб текст та кнопки були поверх накладки */
 }
 
+/* Стиль для головного заголовка */
 .content h1 {
+    color: white;
     font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: white;
+    margin-bottom: 10px;
 }
 
+/* Стиль для підзаголовка */
 .content p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 10px;
     color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
+/* Стиль для кнопок на головній сторінці */
 .buttons a {
     text-decoration: none;
     color: white;

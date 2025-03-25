@@ -1,152 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+/* ======================== styleContacts.css ======================== */
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* Загальні стилі */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    background: #000; /* Чорний фон */
-    color: white;
-    text-align: center;
-    padding: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
-/* Кнопка повернення */
-.home-button {
-    position: absolute;
+/* Контейнер для всього контенту(класи)*/
+.contact-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    text-align: center; 
+}
+
+/* Кнопка повернення на головну */
+a.home-button {
+    position: absolute; /* Закріплена у верхньому лівому куті */
     top: 20px;
     left: 20px;
     background: #5618acf0;
     color: black;
     padding: 10px 20px;
     border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
     font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-weight: bold;
 }
 
-.home-button:hover {
+a.home-button:hover {
     background: white;
-    transform: scale(1.1);
+    color: black;
 }
 
-/* Контейнер */
-.contact-container {
-    max-width: 800px;
-    text-align: center;
-    padding: 40px;
-}
-
-/* Заголовки */
-h1, h2 {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-/* Контактна інформація */
-.contact-info p {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.contact-info a {
-    color: #5618acf0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-/* Години роботи */
-.opening-hours {
-    list-style: none;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.opening-hours li {
-    padding: 5px 0;
-}
-
-.opening-hours span {
-    font-weight: bold;
-    color: #5618acf0;
-}
-
-/* Карта */
-.map-container {
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    max-width: 500px;
-}
-
-/* Соціальні мережі */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.social-links a {
-    color: #5618acf0;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
+/* Стилі для контактної форми */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
     color: white;
 }
 
-/* Форма */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 600px;
-    margin: auto;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.contact-form textarea {
-    height: 100px;
-    resize: none;
-}
-
+/* Кнопка надсилання */
 .contact-form button {
     background: #5618acf0;
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    padding: 12px;
+    padding: 10px 20px;
     border-radius: 8px;
+    border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    transition: background 0.3s;
+    color: black;
 }
 
 .contact-form button:hover {
     background: white;
-    transform: scale(1.05);
+}
+
+/* Списки (марковані, нумеровані ) */
+.opening-hours, .social-links, ul, ol {
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.opening-hours li, .social-links li, ul li, ol li {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+
+
+/* Карта */
+.map-container {
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
 }
