@@ -1,5 +1,3 @@
-/* ======================== styleContacts.css ======================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 /* Загальні стилі */
@@ -92,4 +90,10 @@ a.home-button:hover {
     margin: 20px auto;
     border-radius: 12px;
     overflow: hidden;
+}
+/* Сусідній селектор,Застосовується до <a>, що йде одразу після <strong> */
+strong + a {
+    color: #b37eff;
+    font-weight: bold;
+    text-decoration: underline;
 }

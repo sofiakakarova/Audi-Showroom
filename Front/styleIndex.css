@@ -7,12 +7,12 @@ body {
     padding: 0;
 }
 
-/* important*/
+/*Посилання important*/
 .top-buttons a {
     position: relative; /* Встановлюємо активність посилань */
     z-index: 3;  /* Вищий пріоритет для кліку */
     text-decoration: none;
-    color: white !important;
+    color: white ;
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
