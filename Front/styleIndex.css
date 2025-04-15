@@ -6,21 +6,19 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/*Посилання important*/
 .top-buttons a {
-    position: relative; /* Встановлюємо активність посилань */
-    z-index: 3;  /* Вищий пріоритет для кліку */
-    text-decoration: none;
-    color: white ;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    border: 2px solid white;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
+    position: relative;         /* Дозволяє псевдоелементам і псевдокласам працювати з цією позицією */
+    z-index: 3;                 /* Встановлює пріоритет видимості (щоб було над іншими елементами) */
+    text-decoration: none;     /*  Прибирає підкреслення посилань */
+    color: white;              /* Колір тексту білого кольору */
+    font-size: 18px;           /* Розмір шрифту */
+    font-weight: 500;          /*  Напівжирний текст */
+    text-transform: uppercase;/*  Текст великими літерами */
+    padding: 10px 15px;        /*  Відступи всередині кнопки: зверху/знизу 10px, з боків — 15px */
+    border: 2px solid white;   /* Біла рамка товщиною 2px */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out; 
+                               /*  Плавна анімація кольору фону та тексту при наведенні */
+  }
 .top-buttons a:hover {
     background: white;
     color: black;

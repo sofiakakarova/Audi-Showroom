@@ -93,4 +93,56 @@ a.home-button:hover {
     color: white;
 }
 
+/* 🔸 Плаваючий блок праворуч */
+.floating-note {
+    float: right;
+    background: #5618ac;
+    padding: 10px 15px;
+    margin: 20px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+}
+/* ========== ДОДАНО ДЛЯ ЛАБОРАТОРНОЇ №5 ========== */
+
+/* 🔸 Плаваючий блок праворуч */
+.floating-note {
+    float: right;
+    background: #5618ac;
+    padding: 10px 15px;
+    margin: 20px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    max-width: 200px;
+}
+
+/* 🧲 Псевдокласи :focus, :hover, :active */
+input:focus {
+    border: 2px solid #ffcc00;
+    background-color: #1c1c1c;
+}
+
+.submit-btn:hover {
+    background: #a76bff;
+    color: white;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+    background: #bbb;
+    color: black;
+}
+
+/* 🎯 Псевдоелементи :before / :after до заголовка */
+h1::before {
+    content: "📝 ";
+}
+
+h1::after {
+    content: " ✅";
+}
+
+
 

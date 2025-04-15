@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* Контейнер для всього контенту(класи)*/
+/*  Контейнер з позиціонуванням */
 .contact-container {
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
@@ -21,12 +21,66 @@ body {
     max-width: 800px;
     width: 90%;
     margin: auto;
-    text-align: center; 
+    text-align: center;
+    position: relative; /* позиціонування контейнера */
 }
 
-/* Кнопка повернення на головну */
+/* Блочний елемент з обтіканням */
+.contact-box {
+    float: right; /* плаваючий блок */
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+/* Очищення обтікання */
+.contact-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Псевдоелементи до заголовка */
+.contact-title::before {
+    content: "📬 ";
+}
+.contact-title::after {
+    content: " ✔️";
+}
+
+/*  Псевдокласи для посилань */
+a:link {
+    color: #b37eff;
+}
+a:visited {
+    color: #7f52c2;
+}
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+a:active {
+    color: red;
+}
+
+/* Псевдоклас до першого елемента списку */
+.opening-hours li:first-child {
+    color: #b37eff;
+    font-weight: bold;
+}
+
+/* Рядковий елемент span */
+.highlight {
+    background-color: #3d177f;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+/*  Кнопка повернення на головну */
 a.home-button {
-    position: absolute; /* Закріплена у верхньому лівому куті */
+    position: absolute;
     top: 20px;
     left: 20px;
     background: #5618acf0;
@@ -38,13 +92,12 @@ a.home-button {
     font-size: 16px;
     font-weight: bold;
 }
-
 a.home-button:hover {
     background: white;
     color: black;
 }
 
-/* Стилі для контактної форми */
+/*  Контактна форма */
 .contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
@@ -54,8 +107,6 @@ a.home-button:hover {
     background: #222;
     color: white;
 }
-
-/* Кнопка надсилання */
 .contact-form button {
     background: #5618acf0;
     padding: 10px 20px;
@@ -65,25 +116,21 @@ a.home-button:hover {
     transition: background 0.3s;
     color: black;
 }
-
 .contact-form button:hover {
     background: white;
 }
 
-/* Списки (марковані, нумеровані ) */
+/* Списки */
 .opening-hours, .social-links, ul, ol {
     list-style-position: inside;
     padding: 0;
     text-align: left;
     margin-bottom: 20px;
 }
-
-.opening-hours li, .social-links li, ul li, ol li {
+.opening-hours li, .social-links li {
     margin-bottom: 10px;
     color: #ddd;
 }
-
-
 
 /* Карта */
 .map-container {
@@ -91,7 +138,8 @@ a.home-button:hover {
     border-radius: 12px;
     overflow: hidden;
 }
-/* Сусідній селектор,Застосовується до <a>, що йде одразу після <strong> */
+
+/* Сусідній селектор: a одразу після strong */
 strong + a {
     color: #b37eff;
     font-weight: bold;

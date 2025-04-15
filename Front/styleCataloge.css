@@ -80,3 +80,43 @@ a.home-button:hover {
     margin-left: 20px;
     color: #ddd;
 }
+/* ========== ДОДАНО ДЛЯ ЛАБОРАТОРНОЇ №5 ========== */
+
+/* 📦 Позиційований блок із ціною */
+.car-table td.price-box {
+    position: relative;
+}
+
+.car-table td.price-box::after {
+    content: "🔥 Top Deal";
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #ff5e5e;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 🧾 Рядковий елемент span */
+.car-description span.detail {
+    background: #fff;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* 🎯 Псевдоклас :first-child для опису */
+.car-description dt:first-child {
+    color: #e682f8;
+}
+
+/* 🎨 Псевдоелементи до заголовка */
+h1.gradient-text::before {
+    content: "🚘 ";
+}
+
+h1.gradient-text::after {
+    content: " ⚡️";
+}
