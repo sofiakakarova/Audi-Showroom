@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Drive Registration</title>
-    
+    <script src="scripts.js"></script>
     <!-- Підключений зовнішній стиль -->
     <link rel="stylesheet" href="styleTestDrive.css">
 
@@ -28,16 +28,25 @@
     </style>
 </head>
 <body>
-
+    <!-- Внутрішній скрипт: prompt -->
+<script>
+    let userName = prompt("What's your name for test drive registration?");
+    if (userName) {
+      alert("Hello " + userName + "! Please proceed with registration.");
+    }
+  </script>
+  
     <!-- Кнопка повернення на головну -->
     <a href="index.html" class="home-button">⬅ Back to Home</a>
 
     <div class="test-drive-container">
-        <h1>Test Drive Registration</h1>
+        <h1 id="page-title">Test Drive Registration</h1>
         <!-- 🔸 Плаваючий блок (float) -->
 <div class="floating-note">
     💡 Test drive requires valid license & ID!
 </div>
+<!-- 🔵 Кнопка для діалогу з користувачем -->
+<button onclick="userDialog()">Бронювати тест-драйв</button>
 
         <!--  Внутрішній стиль застосовано до цього абзацу -->
         <p>We offer you the opportunity to test drive the car of your dreams. Fill out the form below to schedule your test drive.</p>

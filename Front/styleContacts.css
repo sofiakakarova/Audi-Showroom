@@ -22,7 +22,7 @@ body {
     width: 90%;
     margin: auto;
     text-align: center;
-    position: relative; /* позиціонування контейнера */
+    position: static; /* позиціонування контейнера */
 }
 
 /* Блочний елемент з обтіканням */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audi Catalog</title>
     <link rel="stylesheet" href="styleCataloge.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
 
@@ -12,7 +13,11 @@
     <a href="index.html" class="home-button">⬅️ Home</a>
 
     <!-- Головний заголовок -->
-    <h1 class="gradient-text">Choose your dream car</h1>
+    <h1 id="gradient-text">Choose your dream car</h1>
+<!--Перенаправлення через 10сек -->
+<script>
+    redirectToHomePage();
+</script>
 
     <!-- Таблиця з автомобілями -->
     <table class="car-table">
@@ -51,7 +56,25 @@
             </tr> 
         </tbody>
     </table>
+<!-- Блок для вибору моделей -->
+<div class="price-compare">
+    <h2>Compare Car Prices</h2>
+    <select id="car1">
+        <option value="50000">Audi A5 - $50,000</option>
+        <option value="80000">Audi RS7 - $80,000</option>
+        <option value="90000">Audi Q8 - $90,000</option>
+        <option value="75000">Audi e-tron - $75,000</option>
+    </select>
 
+    <select id="car2">
+        <option value="50000">Audi A5 - $50,000</option>
+        <option value="80000">Audi RS7 - $80,000</option>
+        <option value="90000">Audi Q8 - $90,000</option>
+        <option value="75000">Audi e-tron - $75,000</option>
+    </select>
+
+    <button onclick="compareCarPrices()">Compare</button>
+</div>
     <!-- Опис автомобілів у вигляді списку -->
     <h2 class="gradient-text">Why Choose Audi?</h2>
     <dl class="car-description">
@@ -67,6 +90,9 @@
         <dt><strong>Audi e-tron</strong></dt>
         <dd>- Fully electric and eco-friendly</dd>
     </dl>
-
+ <!-- getElementById -->
+ <script>
+    changeTitleById();
+  </script>
 </body>
 </html>

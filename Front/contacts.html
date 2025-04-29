@@ -1,23 +1,25 @@
 <!-- 🔗 Підключення CSS-файлу -->
 <link rel="stylesheet" href="styleContacts.css">
-
+<script src="scripts.js"></script>
 <body>
-    <!-- 🟦 Блочний елемент, позиціонується через CSS як absolute -->
+    <!--  Блочний елемент, позиціонується через CSS як absolute -->
     <a href="index.html" class="home-button">⬅️ Back to Home</a>
 
-    <!-- 🟦 Основний контейнер сторінки: background, padding, border-radius — через CSS -->
+    <!--  Основний контейнер сторінки: background, padding, border-radius — через CSS -->
     <div class="contact-container">
 
-        <!-- 🟪 Заголовок з псевдоелементами ::before і ::after -->
-        <h1 class="contact-title">Contact Us</h1>
-
-        <!-- 🟨 Вміст з контактами, просто параграфи -->
+        <!--  Заголовок з псевдоелементами ::before і ::after -->
+        <h1 id="contact-title">📫 Contact Us ✅</h1>
+        <!--  Вміст з контактами, просто параграфи -->
         <div class="contact-info">
             <p><strong>📍 Address:</strong> Hmyri, 16, Kyiv</p>
             <p><strong>📧 Email:</strong> <a href="mailto:info.premium.audi@gmail.com">info.premium.audi@gmail.com</a></p>
             <p><strong>📞 Phone:</strong> +380 99 713 39 74</p>
         </div>
+<!-- 🔵 Кнопка для виклику функції розробника -->
+<button onclick="showDeveloperInfo('Kakarova', 'Sofiia')">Показати інформацію (без посади)</button>
 
+<button onclick="showDeveloperInfo('Kakarova', 'Sofiia', 'Frontend Developer')">Показати інформацію (з посадою)</button>
         <!-- Плаваючий блок праворуч (float: right), для прикладу -->
         <div class="contact-box">
             <p class="notice">
@@ -26,7 +28,7 @@
             </p>
         </div>
 
-        <!-- 🟩 Список з годинами (перший елемент стилізований :first-child) -->
+        <!-- Список з годинами (перший елемент стилізований :first-child) -->
         <h2>Opening Hours</h2>
         <ul class="opening-hours">
             <li>Monday - Friday: <span>9:00 AM - 7:00 PM</span></li>
@@ -34,14 +36,14 @@
             <li>Sunday: <span>Closed</span></li>
         </ul>
 
-        <!-- 🟨 Вставка карти -->
+        <!-- Вставка карти -->
         <h2>Find Us on the Map</h2>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.804376732581!2d30.519618076116746!3d50.45365137156852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4c2a1f8e73%3A0x5633e5d9d4c9e6b6!2z0JrRg9C30L3QsNGPLCDQnNCw0LvQtdGA0YHQuNGC0LXRgiwg0KfQutCw0YLRgdGM0LrQsCDQvtCx0LsuLCAwMDAwMA!5e0!3m2!1suk!2sua!4v1715024044999" 
             width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-        <!-- 🟦 Нумерований список соцмереж -->
+        <!-- Нумерований список соцмереж -->
         <h2>Social Media</h2>
         <ol class="social-links">
             <li><a href="#">Facebook</a></li>
@@ -58,4 +60,37 @@
             <button type="submit">Send</button>
         </form>
     </div>
-</body>
+    <script>
+        let confirmSend = confirm("Do you want to send a message?");
+        if (confirmSend) {
+          alert("Your message was sent successfully!");
+        } else {
+          alert("Message was not sent.");
+        }
+      </script>
+      <!-- Зміна фону -->
+      <script>
+        changeBackgroundFor30Seconds();
+      </script>
+      <!-- querySelectorAll -->
+      <script>
+        highlightAllLinks();
+      </script>
+<!-- innerHTML, outerHTML,
+nodeValue / data, textContent-->
+<script>
+    addNewOpeningHours();
+    replaceEmailBlock();
+    updatePhoneText();
+    updatePageTitleNode();
+  </script>
+
+<script>
+    addCustomNote();
+    insertImportantNotice();
+    addAfterMap();
+    replaceSocialBlock();
+    insertSocialNote();
+    removeLastSocialLink();
+  </script>
+

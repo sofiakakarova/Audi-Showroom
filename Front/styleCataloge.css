@@ -120,3 +120,30 @@ h1.gradient-text::before {
 h1.gradient-text::after {
     content: " ⚡️";
 }
+/* Стилі для блоку порівняння */
+.price-compare {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.price-compare select,
+.price-compare button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.price-compare button {
+    background-color: #5618acf0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.price-compare button:hover {
+    background-color: white;
+    color: black;
+}
