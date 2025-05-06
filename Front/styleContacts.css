@@ -145,3 +145,12 @@ strong + a {
     font-weight: bold;
     text-decoration: underline;
 }
+/* Підсвічування вибраного елемента списку */
+.social-links li.highlight {
+    background-color: #5618acf0;
+    color: white;
+    border-radius: 6px;
+    padding: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
