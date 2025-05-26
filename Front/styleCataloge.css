@@ -57,6 +57,7 @@ a.home-button:hover {
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s;
+    position: relative;
 }
 
 .car-table img:hover {
@@ -147,3 +148,4 @@ h1.gradient-text::after {
     background-color: white;
     color: black;
 }
+

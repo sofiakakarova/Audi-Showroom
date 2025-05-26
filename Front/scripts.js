@@ -42,12 +42,6 @@ function changeBackgroundFor30Seconds() {
         document.body.style.backgroundColor = originalBackground;
     }, 30000); // через 30 секунд
 }
-// Перенаправляє на головну сторінку через 10 секунд
-function redirectToHomePage() {
-    setTimeout(() => {
-        window.location.href = "index.html"; //  куди переходимо
-    }, 10000); // 10 секунд затримки
-}
 function changeTitleById() {
     const title = document.getElementById("gradient-text");
     if (title) {
@@ -171,7 +165,7 @@ const headingHandler = {
   }
 };
 
-// Функція ініціалізації подій на сторінці cataloge.html
+// addEvenListener.Функція ініціалізації подій на сторінці cataloge.html
 function initCatalogPageEvents() {
   const heading = document.getElementById("gradient-text");
   if (heading) {
@@ -227,6 +221,18 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 });
+// властивість
+document.addEventListener("DOMContentLoaded", () => {
+  const watchBtn = document.getElementById("watch-btn");
+
+  if (watchBtn) {
+    // Призначення обробника через властивість
+    watchBtn.onclick = function () {
+      alert("🎬 Playing Audi RS7 trailer...");
+    };
+  }
+});
+
 // 🎯 Behavior-поведінка з data-action
 document.addEventListener("DOMContentLoaded", () => {
   const mainMenu = document.querySelector("#main-menu");
@@ -253,3 +259,87 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 });
+
+
+// Події наведення миші на зображення в таблиці автомобілів
+document.addEventListener("DOMContentLoaded", () => {
+  const carImages = document.querySelectorAll(".car-table img");
+
+  carImages.forEach(img => {
+    // mouseover — зміна стилю при наведенні
+    img.addEventListener("mouseover", (event) => {
+      event.target.style.border = "3px solid #ffcc00"; // виділення
+      console.log("Mouse over:", event.target);        // event.target — елемент, над яким відбулась подія
+    });
+
+    // mouseout — повернення до стандартного стилю
+    img.addEventListener("mouseout", (event) => {
+      event.target.style.border = "none";
+      console.log("Mouse out to:", event.relatedTarget); // event.relatedTarget — куди перейшли після миші
+    });
+  });
+});
+
+
+
+// Отримуємо всі елементи, які мають клас 'puzzle-piece'
+const pieces = document.querySelectorAll('.puzzle-piece');
+
+// Для кожного пазлу додаємо обробник події mousedown
+pieces.forEach(piece => {
+  piece.addEventListener('mousedown', startDrag);
+});
+
+// Змінна для відстеження активного (перетягуваного) елемента
+let draggedPiece = null;
+
+// Функція, яка запускається при натисканні миші на елемент
+function startDrag(e) {
+  draggedPiece = e.target; // зберігаємо, який саме елемент перетягується
+  draggedPiece.style.position = 'absolute'; // ставимо абсолютне позиціювання
+  draggedPiece.style.zIndex = 1000;         // елемент буде поверх усіх інших
+
+  // Встановлюємо початкову позицію
+  moveAt(e.pageX, e.pageY);
+
+  // Функція переміщення елемента за координатами миші
+  function moveAt(x, y) {
+    draggedPiece.style.left = x - draggedPiece.offsetWidth / 2 + 'px';
+    draggedPiece.style.top = y - draggedPiece.offsetHeight / 2 + 'px';
+  }
+
+  // Поки рухається мишка — рухаємо елемент
+  function onMouseMove(e) {
+    moveAt(e.pageX, e.pageY);
+  }
+
+  // Підписка на подію переміщення миші
+  document.addEventListener('mousemove', onMouseMove);
+
+  // Коли кнопку миші відпускають — завершення перетягування
+  draggedPiece.onmouseup = function(e) {
+    // Видаляємо обробник руху
+    document.removeEventListener('mousemove', onMouseMove);
+    draggedPiece.onmouseup = null;
+
+    // Визначаємо, чи елемент знаходиться над якоюсь з dropzone
+    const dropzones = document.elementsFromPoint(e.clientX, e.clientY)
+      .filter(el => el.classList.contains('dropzone'));
+
+    // Якщо елемент наведено на пусту зону — вставляємо його туди
+    if (dropzones.length > 0 && dropzones[0].children.length === 0) {
+      dropzones[0].appendChild(draggedPiece);       // переносимо елемент у зону
+      draggedPiece.style.position = 'static';       // прибираємо абсолютне позиціювання
+    } else {
+      // Інакше — повертаємо назад або залишаємо як є
+      draggedPiece.style.position = 'static';
+    }
+
+    // Обнуляємо змінну перетягуваного елемента
+    draggedPiece = null;
+  };
+}
+
+
+
+
